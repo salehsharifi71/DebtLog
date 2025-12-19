@@ -76,33 +76,43 @@ npm install
 </div>
 
 ```bash
-cp .env.example .env
-```
-
 <div dir="rtl">
-
-**5. تولید کلید برنامه:**
-
+cp .env.example .env
+**9. ایجاد دیتابیس نمونه و کاربر تست:**
+```
 </div>
 
 ```bash
-php artisan key:generate
+php artisan db:seed
 ```
-
+<div dir="rtl">
 <div dir="rtl">
 
-**6. تنظیم پایگاه داده:**
-
-فایل `.env` را ویرایش کرده و اطلاعات دیتابیس خود را وارد کنید:
-
+**10. اجرای سرور:**
+**5. تولید کلید برنامه:**
 </div>
 
+```bash
+php artisan serve
+```
+</div>
+<div dir="rtl">
+
+اکنون می‌توانید به آدرس `http://localhost:8000` مراجعه کنید و با اطلاعات زیر وارد شوید:
+```bash
+```
+ایمیل: test@debtlog.local
+رمز عبور: password123
+```
+php artisan key:generate
+</div>
+```
+<div dir="rtl">
+**6. تنظیم پایگاه داده:**
+فایل `.env` را ویرایش کرده و اطلاعات دیتابیس خود را وارد کنید:
 ```env
-DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
-DB_PORT=3306
 DB_DATABASE=debtlog
-DB_USERNAME=root
 DB_PASSWORD=
 ```
 

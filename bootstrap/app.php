@@ -12,7 +12,7 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        //
+        // Default middleware config is sufficient; per-route auth used
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //
