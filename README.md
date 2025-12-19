@@ -1,59 +1,305 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 💰 DebtLog
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+> سیستم مدیریت هوشمند بدهی‌ها و اقساط با اعلان‌های خودکار تلگرام
 
-## About Laravel
+<div dir="rtl">
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 📖 درباره پروژه
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+**DebtLog** یک سیستم مدیریت مالی شخصی است که به شما کمک می‌کند بدهی‌ها، اقساط و هزینه‌های خود را به صورت حرفه‌ای مدیریت کنید. این سیستم با استفاده از فریمورک Laravel توسعه داده شده و قابلیت ارسال اعلان‌های خودکار به تلگرام را دارد.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### ✨ ویژگی‌های کلیدی
 
-## Learning Laravel
+- 📝 **ثبت و مدیریت هزینه‌ها**: امکان ثبت هزینه‌های یکباره و قسطی
+- 🔄 **مدیریت اقساط**: پیگیری اقساط با قابلیت تعیین تعداد و شماره قسط
+- 📅 **تقویم شمسی**: پشتیبانی کامل از تاریخ جلالی (شمسی)
+- 🔔 **اعلان‌های تلگرام**: ارسال یادآوری خودکار برای سررسید اقساط
+- ✅ **وضعیت پرداخت**: پیگیری وضعیت پرداخت هر هزینه
+- 📊 **گزارش‌گیری**: مشاهده وضعیت مالی و بدهی‌ها
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+</div>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## 🚀 شروع سریع
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### پیش‌نیازها
 
-### Premium Partners
+<div dir="rtl">
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+قبل از نصب، اطمینان حاصل کنید که موارد زیر را نصب کرده‌اید:
 
-## Contributing
+</div>
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- PHP >= 8.2
+- Composer
+- MySQL/PostgreSQL/SQLite
+- Node.js & NPM (برای frontend assets)
 
-## Code of Conduct
+### نصب
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+<div dir="rtl">
 
-## Security Vulnerabilities
+**1. کلون کردن پروژه:**
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+</div>
 
-## License
+```bash
+git clone <repository-url> debtlog
+cd debtlog
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<div dir="rtl">
+
+**2. نصب وابستگی‌های PHP:**
+
+</div>
+
+```bash
+composer install
+```
+
+<div dir="rtl">
+
+**3. نصب وابستگی‌های JavaScript:**
+
+</div>
+
+```bash
+npm install
+```
+
+<div dir="rtl">
+
+**4. کپی کردن فایل محیطی:**
+
+</div>
+
+```bash
+cp .env.example .env
+```
+
+<div dir="rtl">
+
+**5. تولید کلید برنامه:**
+
+</div>
+
+```bash
+php artisan key:generate
+```
+
+<div dir="rtl">
+
+**6. تنظیم پایگاه داده:**
+
+فایل `.env` را ویرایش کرده و اطلاعات دیتابیس خود را وارد کنید:
+
+</div>
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=debtlog
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+<div dir="rtl">
+
+**7. اجرای مایگریشن‌ها:**
+
+</div>
+
+```bash
+php artisan migrate
+```
+
+<div dir="rtl">
+
+**8. بیلد کردن assets:**
+
+</div>
+
+```bash
+npm run build
+```
+
+<div dir="rtl">
+
+**9. اجرای سرور:**
+
+</div>
+
+```bash
+php artisan serve
+```
+
+<div dir="rtl">
+
+اکنون می‌توانید به آدرس `http://localhost:8000` مراجعه کنید.
+
+</div>
+
+---
+
+## 🔔 راه‌اندازی اعلان‌های تلگرام
+
+<div dir="rtl">
+
+برای فعال‌سازی اعلان‌های خودکار تلگرام، [راهنمای کامل تنظیم تلگرام](TELEGRAM_SETUP_GUIDE.md) را مطالعه کنید.
+
+**خلاصه مراحل:**
+
+1. ساخت ربات جدید با [@BotFather](https://t.me/BotFather)
+2. دریافت توکن ربات
+3. دریافت Chat ID خود
+4. تنظیم متغیرهای محیطی در فایل `.env`:
+
+</div>
+
+```env
+TELEGRAM_BOT_TOKEN=your_bot_token_here
+TELEGRAM_CHAT_ID=your_chat_id_here
+```
+
+<div dir="rtl">
+
+5. اجرای دستور زمان‌بندی برای ارسال اعلان‌ها:
+
+</div>
+
+```bash
+php artisan schedule:work
+```
+
+---
+
+## 🗄️ ساختار دیتابیس
+
+<div dir="rtl">
+
+### جدول Expenses
+
+</div>
+
+| Field | Type | Description |
+|-------|------|-------------|
+| id | bigint | شناسه یکتا |
+| title | string | عنوان هزینه |
+| amount | decimal | مبلغ (ریال) |
+| type | enum | نوع: one_time یا recurring |
+| due_date | date | تاریخ سررسید |
+| is_paid | boolean | وضعیت پرداخت |
+| description | text | توضیحات (اختیاری) |
+| recurrence_count | integer | تعداد کل اقساط |
+| current_installment | integer | شماره قسط فعلی |
+| created_at | timestamp | تاریخ ایجاد |
+| updated_at | timestamp | تاریخ آخرین بروزرسانی |
+
+---
+
+## 🧪 تست‌ها
+
+<div dir="rtl">
+
+پروژه از فریمورک Pest برای تست استفاده می‌کند:
+
+</div>
+
+```bash
+# اجرای تمام تست‌ها
+php artisan test
+
+# یا با استفاده از Pest
+./vendor/bin/pest
+
+# اجرای تست‌های خاص
+php artisan test --filter=ExampleTest
+```
+
+---
+
+## 🛠️ تکنولوژی‌های استفاده شده
+
+<div dir="rtl">
+
+- **Backend**: Laravel 12
+- **Frontend**: Vite, TailwindCSS
+- **Database**: MySQL/PostgreSQL/SQLite
+- **Testing**: Pest PHP
+- **Persian Date**: morilog/jalali
+- **API Integration**: Telegram Bot API
+
+</div>
+
+---
+
+## 📂 ساختار پروژه
+
+```
+debtlog/
+├── app/
+│   ├── Console/Commands/     # دستورات Artisan سفارشی
+│   ├── Http/Controllers/     # کنترلرهای برنامه
+│   └── Models/              # مدل‌های Eloquent
+├── database/
+│   ├── migrations/          # فایل‌های مایگریشن
+│   └── seeders/            # Seederها
+├── resources/
+│   ├── views/              # فایل‌های Blade
+│   ├── js/                 # فایل‌های JavaScript
+│   └── css/                # فایل‌های CSS
+├── routes/
+│   ├── web.php            # مسیرهای وب
+│   └── api.php            # مسیرهای API
+└── tests/                 # تست‌های واحد و یکپارچه
+```
+
+---
+
+## 🤝 مشارکت
+
+<div dir="rtl">
+
+مشارکت شما در بهبود این پروژه استقبال می‌شود! برای مشارکت:
+
+1. پروژه را Fork کنید
+2. یک Branch جدید برای feature خود ایجاد کنید (`git checkout -b feature/AmazingFeature`)
+3. تغییرات خود را Commit کنید (`git commit -m 'Add some AmazingFeature'`)
+4. Branch خود را Push کنید (`git push origin feature/AmazingFeature`)
+5. یک Pull Request ایجاد کنید
+
+</div>
+
+---
+
+## 📝 لایسنس
+
+<div dir="rtl">
+
+این پروژه تحت لایسنس MIT منتشر شده است. برای اطلاعات بیشتر فایل [LICENSE](LICENSE) را مشاهده کنید.
+
+</div>
+
+---
+
+## 📧 تماس و پشتیبانی
+
+<div dir="rtl">
+
+در صورت داشتن سوال، پیشنهاد یا گزارش باگ، می‌توانید:
+
+- یک Issue در گیت‌هاب ایجاد کنید
+- یک Pull Request ارسال کنید
+
+</div>
+
+---
+
+<div align="center" dir="rtl">
+
+**ساخته شده با ❤️ برای مدیریت بهتر امور مالی شخصی**
+
+</div>
