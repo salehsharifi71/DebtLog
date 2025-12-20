@@ -314,7 +314,7 @@
                 }
 
                 // Send AJAX request
-                fetch('/api/expenses', {
+                fetch('{{route('expenses.store')}}', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
