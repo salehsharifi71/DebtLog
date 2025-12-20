@@ -533,7 +533,7 @@
                 return;
             }
 
-            fetch(`/api/expenses/${expenseId}/mark-paid`, {
+            fetch(`{{route('home')}}/api/expenses/${expenseId}/mark-paid`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
