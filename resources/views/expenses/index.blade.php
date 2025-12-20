@@ -66,7 +66,7 @@
                         <p class="text-sm text-gray-600">داشبورد مدیریت هزینه‌ها</p>
                     </div>
                 </div>
-                <a href="/expenses/create" class="bg-gradient-to-l from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-lg font-bold hover:from-blue-700 hover:to-indigo-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105">
+                <a href="{{route('expenses.create')}}" class="bg-gradient-to-l from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-lg font-bold hover:from-blue-700 hover:to-indigo-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105">
                     ➕ افزودن هزینه جدید
                 </a>
             </div>
